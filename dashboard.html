@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" type="image/svg+xml" href="gamer-studio-mark.svg?v=5">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Caacupe+One&family=Changa+One:ital@0;1&family=Fjalla+One&family=Lilita+One&family=Luckiest+Guy&family=Roboto:ital,wght@0,100..900;1,100..900&family=Titan+One&display=swap" rel="stylesheet">
+    <title>Gamer Studio</title>
+<style>
+    * {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        background-color: black;
+        margin: 0;
+        font-family: "Archivo Black", sans-serif;
+    }
+    html{
+        min-height:100%;
+        background:#000;
+    }
+
+    #container1{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin-top: 15px;
+    }
+    #container2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        margin-top: 50px;
+    }
+
+    #container2 {
+        display: none;
+    }
+
+    #box {
+        border: 1px solid gray;
+        border-radius: 16px;
+        width: 40%;
+        min-width: 320px;
+        padding: 20px 0;
+        box-sizing: border-box;
+    }
+
+    #header2 {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+    }
+    .brand-mark{
+        display:block;
+        width:48px;
+        height:48px;
+        margin:0 auto 12px;
+        object-fit:contain;
+    }
+
+    #paragraph1,
+    #paragraph2,
+    #paragraph3 {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        font-size: 15px;
+        color: #A0A0A0;
+    }
+    a {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        color: skyblue;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    label {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: left;
+        color: white;
+        padding-left: 20px;
+        width: 60%;
+        box-sizing: border-box;
+    }
+
+    input {
+        border: 1px solid #3D3D3D;
+        border-radius: 10px;
+        height: 35px;
+        width: 60%;
+        margin-left: 20px;
+        background-color: #252525;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        color: white;
+        box-sizing: border-box;
+        padding: 0 12px;
+    }
+
+    input::placeholder {
+        color: #666666;
+    }
+
+    #btn,#btn1{
+        border: 1px solid #3D3D3D;
+        border-radius: 10px;
+        height: 40px;
+        width: 60%;
+        margin-left: 20px;
+        background-color: #007AFF;
+        color: white;
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .btn-google {
+        font-family: "Archivo Black", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 60%;
+        height: 45px;
+        margin-left: 20px;
+        margin-top: -4px;
+        border: 1px solid #3D3D3D;
+        border-radius: 10px;
+        background-color: #1F1F1F;
+        color: white;
+        cursor: pointer;
+    }
+    #spinner{
+        border: 2px solid rgba(255,255,255,0.25);
+        border-top: 2px solid white;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-block;
+        animation: spin 0.8s linear infinite;
+        flex-shrink: 0;
+    }
+    @keyframes spin {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+        @media (max-width: 600px){
+            #container1,
+            #container2{
+                box-sizing:border-box;
+                min-height:100vh;
+                min-height:100svh;
+                margin:0;
+                padding:20px 12px;
+                align-items:center;
+            }
+            #box{
+                width:100%;
+                min-width:0;
+                max-width:420px;
+                padding:26px 18px;
+                border-color:#303139;
+                border-radius:18px;
+                background:#101114;
+            }
+            #header2{
+                font-size:24px;
+                color:white;
+            }
+            #paragraph1{
+                margin:10px 0 22px;
+                line-height:1.5;
+            }
+            form{
+                width:100%;
+                gap:10px;
+            }
+            label{
+                width:100%;
+                padding:0;
+                font-size:13px;
+            }
+            input{
+                width:100%;
+                height:44px;
+                margin:0 0 6px;
+                font-size:16px;
+            }
+            #btn,
+            #btn1,
+            .btn-google{
+                width:100%;
+                min-height:46px;
+                margin:4px 0 0;
+            }
+            #paragraph2,
+            #paragraph3{
+                width:100%;
+                line-height:1.5;
+                font-size:13px;
+            }
+            #paragraph2{
+                margin-top:10px;
+            }
+            #paragraph3{
+                margin-top:8px;
+            }
+        }
+        body,
+        body *{
+            font-family:"Roboto", sans-serif !important;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6{
+            font-family:"Archivo Black", sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <div id="box">
+            <img class="brand-mark" src="gamer-studio-mark.svg?v=5" alt="Gamer Studio">
+            <h2 id="header2">Create Account</h2>
+            <p id="paragraph1">Join Gamer Studio to share your gaming moments.</p>
+
+            <form id="signup-form">
+                <label for="signup-name">Gamer Name</label>
+                <input type="text" id="signup-name" placeholder="Enter your gamer name"required>
+
+                <label for="signup-email">Email Address</label>
+                <input type="text" id="signup-email" placeholder="Gamer@example.com" required>
+
+                <label for="signup-pass">Password</label>
+                <input type="password" id="signup-pass" placeholder="Enter at least 6 digit" required>
+
+                <button type="submit" id="btn">Sign Up</button>
+
+                <p id="paragraph2">OR CONTINUE WITH</p>
+
+                <button type="button" class="btn-google" aria-label="Continue with Google">
+                    <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path fill="#4285F4" d="M21.6 12.23c0-.7-.06-1.37-.19-2.02H12v3.82h5.39a4.6 4.6 0 0 1-2 3.02v2.5h3.23c1.9-1.75 2.98-4.33 2.98-7.32z"></path>
+                        <path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.44l-3.23-2.5c-.9.6-2.06.95-3.39.95-2.6 0-4.8-1.76-5.58-4.13H.77v2.61A10 10 0 0 0 12 22z"></path>
+                        <path fill="#FBBC05" d="M6.42 20.83A6.02 6.02 0 0 1 6 17.2V14.6H2.78A10 10 0 0 0 2 12c0-1.62.39-3.16 1.08-4.52L6.42 10.1v10.73z"></path>
+                        <path fill="#EA4335" d="M12 3.98c1.47 0 2.79.5 3.83 1.48l2.87-2.87C16.95.92 14.69 0 12 0A10 10 0 0 0 2.78 7.48l3.64 2.81c.78-2.37 2.98-4.31 5.58-4.31z"></path>
+                    </svg>
+                    <span>Sign Up with Google</span>
+                </button>
+
+                <p id="paragraph3">Already have an account? <a href="#" class="toggle-form" data-target="container2">Log in</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div id="container2">
+        <div id="box">
+            <h2 id="header2">Welcome Back</h2>
+            <p id="paragraph1">Log in to continue your gaming journey.</p>
+
+            <form id="login-form">
+                <label for="login-email">Email Address</label>
+                <input type="text" id="login-email" placeholder="Gamer@example.com">
+
+                <label for="login-pass">Password</label>
+                <input type="password" id="login-pass" placeholder="Enter at least 6 digit">
+
+                <button type="submit" id="btn1">Log In</button>
+
+                <p id="paragraph2">OR CONTINUE WITH</p>
+
+                <button type="button" class="btn-google" aria-label="Continue with Google">
+                    <svg class="google-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                        <path fill="#4285F4" d="M21.6 12.23c0-.7-.06-1.37-.19-2.02H12v3.82h5.39a4.6 4.6 0 0 1-2 3.02v2.5h3.23c1.9-1.75 2.98-4.33 2.98-7.32z"></path>
+                        <path fill="#34A853" d="M12 22c2.7 0 4.96-.9 6.62-2.44l-3.23-2.5c-.9.6-2.06.95-3.39.95-2.6 0-4.8-1.76-5.58-4.13H.77v2.61A10 10 0 0 0 12 22z"></path>
+                        <path fill="#FBBC05" d="M6.42 20.83A6.02 6.02 0 0 1 6 17.2V14.6H2.78A10 10 0 0 0 2 12c0-1.62.39-3.16 1.08-4.52L6.42 10.1v10.73z"></path>
+                        <path fill="#EA4335" d="M12 3.98c1.47 0 2.79.5 3.83 1.48l2.87-2.87C16.95.92 14.69 0 12 0A10 10 0 0 0 2.78 7.48l3.64 2.81c.78-2.37 2.98-4.31 5.58-4.31z"></path>
+                    </svg>
+                    <span>Sign In with Google</span>
+                </button>
+
+                <p id="paragraph3">Don't have an account? <a href="#" class="toggle-form" data-target="container1">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="gamer-studio.js?v=27"></script>
+    <script type="module" src="gamer-studio auth.js?v=27"></script>
+</body>
+</html>

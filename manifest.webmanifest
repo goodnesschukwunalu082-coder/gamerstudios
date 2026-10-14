@@ -1,0 +1,18 @@
+{
+  "name": "Gamer Studio",
+  "short_name": "Gamer Studio",
+  "description": "A social platform for gamers",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "./gamer-studio-mark.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
